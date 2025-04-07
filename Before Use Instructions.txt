@@ -1,0 +1,22 @@
+Follow circuit diagrams from Report file to connect ftdi to esp32 to laptop using type b mini port
+Install Arduino IDE
+Go to tools > boards > boards manager > search for esp32 by espressif systems > select version 1.0.5 (Important)
+Install and wait
+Download CH340 com port driver
+Open arduino ide
+select tools > boards > esp32 > ESP32 Wrover Module
+Install library by going to library manager and search for ArduinoWebSockets by Gil Maimon
+Settings to be made under tools tab:-
+Board: "ESP32 Wrover Module"
+Port will be the port you plugged esp32 cam using ftdi
+Flash Frequency: "80Mhz"
+Flash Mode: "QIO"
+Partition Scheme: "Huge APP (3MB No OTA/1MB SPIFFS)"
+Upload Speed: "921600"
+Open "FaceDoorEntryESP32Cam" folder then select FaceDoorEntryESP32Cam.ino file and open it in arduino
+Enter proper wifi ssid and password in the code inside FaceDoorEntryESP32Cam.ino tab
+Verify and upload code
+Go to serial monitor
+Serial port will be set at 115200 to get serial output
+connect esp32 to hotspot (switch on hotspot)
+Take the ip address from serial monitor put it into web browser  
